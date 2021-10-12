@@ -1,6 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
-import { throws } from 'assert';
-import { TagService } from './tqg.service';
+import { TagService } from '@tag/tag.service';
 
 @Controller('tags')
 export class TagController {
