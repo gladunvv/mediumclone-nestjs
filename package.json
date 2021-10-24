@@ -82,6 +82,7 @@
   "_moduleAliases": {
     "@app": "./dist",
     "@tag": "./dist/tag",
-    "@user": "./dist/user"
+    "@user": "./dist/user",
+    "@article": "./dist/article"
   }
 }
