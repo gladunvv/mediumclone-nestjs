@@ -18,6 +18,7 @@ import { ArticleService } from '@article/article.service';
 import { CreateArticleDto } from '@article/dto/createArticle.dto';
 import { ArticleResponseInterface } from '@article/types/articleResponse.interface';
 import { ArticlesResponseInterface } from '@article/types/articlesResponse.interface';
+import { BackendValidationPipe } from '@app/shared/pipes/backendValidation.pipe';
 
 @Controller('articles')
 export class ArticleController {
@@ -42,7 +43,7 @@ export class ArticleController {
 
   @Post()
   @UseGuards(AuthGuard)
-  @UsePipes(new ValidationPipe())
+  @UsePipes(new BackendValidationPipe())
   async create(
     @User() currentUser: UserEntity,
     @Body('article') createArticleDto: CreateArticleDto,
